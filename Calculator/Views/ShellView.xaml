@@ -1,0 +1,57 @@
+﻿<Window x:Class="Calculator.Views.ShellView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculator.Views"
+        mc:Ignorable="d"
+        Title="Calculator" Height="350" Width="280">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <!-- Textbox -->
+        <TextBox x:Name="prevValueTxt" Grid.Row="0" Grid.Column="1" Text="{Binding Path=PrevValue, Mode=OneWay}" Grid.ColumnSpan="3" FontSize="25" TextAlignment="Right" IsReadOnly="True" VerticalAlignment="Bottom" BorderThickness="0"></TextBox>
+        <TextBox x:Name="currentValueTxt" Grid.Row="1" Grid.Column="1" Text="{Binding Path=CurrentValue, Mode=OneWay}" Grid.ColumnSpan="3" FontSize="35" TextAlignment="Right" IsReadOnly="True" VerticalAlignment="Bottom" BorderThickness="0"></TextBox>
+        <TextBox x:Name="actionToPerformTxt" Grid.Row="1" Grid.Column="0" Text="{Binding Path=ActionToPerform, Mode=OneWay}" TextAlignment="Center" IsReadOnly="True" VerticalAlignment="Center" BorderThickness="0"></TextBox>
+
+        <!-- Number buttons -->
+        <Button x:Name="Seven" Grid.Row="3" Grid.Column="0" >7</Button>
+        <Button x:Name="Eight" Grid.Row="3" Grid.Column="1" >8</Button>
+        <Button x:Name="Nine" Grid.Row="3" Grid.Column="2" >9</Button>
+        <Button x:Name="Four" Grid.Row="4" Grid.Column="0" >4</Button>
+        <Button x:Name="Five" Grid.Row="4" Grid.Column="1" >5</Button>
+        <Button x:Name="Six" Grid.Row="4" Grid.Column="2" >6</Button>
+        <Button x:Name="One" Grid.Row="5" Grid.Column="0" >1</Button>
+        <Button x:Name="Two" Grid.Row="5" Grid.Column="1" >2</Button>
+        <Button x:Name="Three" Grid.Row="5" Grid.Column="2" >3</Button>
+        <Button x:Name="Zero" Grid.Row="6" Grid.Column="1" >0</Button>
+
+
+        <!-- Symbols -->
+        <Button x:Name="Multiply" Grid.Row="2" Grid.Column="3" >*</Button>
+        <Button x:Name="Divide" Grid.Row="3" Grid.Column="3" >/</Button>
+        <Button x:Name="Subtract" Grid.Row="4" Grid.Column="3" >-</Button>
+        <Button x:Name="Add" Grid.Row="5" Grid.Column="3" >+</Button>
+        <Button x:Name="Calculate" Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="2">=</Button>
+        <Button x:Name="PlusMinus" Grid.Row="6" Grid.Column="0" >+/-</Button>
+
+        <!-- Clear buttons -->
+        <Button x:Name="Clear" Grid.Row="2" Grid.Column="0" >C</Button>
+        <Button x:Name="ClearEntry" Grid.Row="2" Grid.Column="1" >CE</Button>
+        <Button x:Name="BackButton" Grid.Row="2" Grid.Column="2" Content="&lt;=" ></Button>
+    </Grid>
+</Window>
